@@ -16,8 +16,8 @@ public class Personaje : MonoBehaviour {
     // Update is called once per frame
     void Update () {        
         float hInput = Input.GetAxis ("Horizontal");
+        float vInput = Input.GetAxis("Vertical");
         this.transform.position += new Vector3 (hInput * speed * Time.deltaTime, 0, 0);
-
 
 
         if (hInput < 0)
@@ -33,7 +33,7 @@ public class Personaje : MonoBehaviour {
             animator.SetBool("Corriendo",false);
         }
 
-        if (Input.GetKeyDown(KeyCode.W)) {
+        if (vInput > 0) {
             if (jump == false) {
                 GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0.0f, 350.0f));
                 jump = true;
@@ -42,7 +42,7 @@ public class Personaje : MonoBehaviour {
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Space)){            
+        if(Input.GetKeyDown(KeyCode.Space)|| Input.GetButton("Fire1")){            
             atacar();
         }
     }
