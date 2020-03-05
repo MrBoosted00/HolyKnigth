@@ -5,7 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - suelo
+  - game
   - Body
+  - Pinchos
+  - Esqueleto
+  - Mago
+  - Hechizo
+  - plataforma
+  - puerta
+  - puerta2
+  - Boss
+  - Ui
+  - Vidas
   layers:
   - Default
   - TransparentFX
@@ -16,7 +27,7 @@ TagManager:
   - 
   - 
   - Personaje
-  - 
+  - Enemigo
   - 
   - 
   - 
